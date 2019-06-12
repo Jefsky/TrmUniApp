@@ -3,9 +3,11 @@
 		<view class="text-box" scroll-y="true">
 			<text class="uni-h3 uni-page-head-title">运单{{id}}物流状态</text>
 		</view>
+		<uni-list v-if="list.length == 0">
+			<uni-list-item title="暂无物流信息" note="---"></uni-list-item>
+		</uni-list>
 		<view class="uni-list">
 			<uni-list class="uni-list-cell" hover-class="uni-list-cell-hover" v-for="(item,index) in list" :key="index">
-				
 				<uni-list-item v-if="index == 0" class="uni-h4" :title="item.w_place+'-'+item.w_content" :note="item.w_date" show-arrow="false" show-extra-icon="true" :extra-icon="iconin"></uni-list-item>
 				<uni-list-item v-else class="uni-h4" :title="item.w_place+'-'+item.w_content" :note="item.w_date" show-arrow="false" show-extra-icon="true" :extra-icon="icon"></uni-list-item>
 			</uni-list>

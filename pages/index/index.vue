@@ -44,9 +44,8 @@
 					success: function (res) {
 						console.log('条码类型：' + res.scanType);
 						console.log('条码内容：' + res.result);
-						this.id = res.result;
 						uni.navigateTo({
-							url: '../result/result?id='+this.id,
+							url: '../result/result?id='+res.result,
 							success: res => {},
 							fail: () => {},
 							complete: () => {}
