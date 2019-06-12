@@ -1125,12 +1125,13 @@ Z([3,'1'])
 Z([[4],[[5],[1,'default']]])
 Z(z[2])
 Z([3,'---'])
+Z([3,'false'])
 Z([3,'暂无物流信息'])
 Z([[2,'+'],[[2,'+'],[1,'2'],[1,',']],[1,'1']])
 Z([3,'index'])
 Z([3,'item'])
 Z([[7],[3,'list']])
-Z(z[9])
+Z(z[10])
 Z(z[2])
 Z([3,'uni-list-cell'])
 Z([3,'uni-list-cell-hover'])
@@ -1141,17 +1142,17 @@ Z(z[2])
 Z([3,'uni-h4'])
 Z([[7],[3,'iconin']])
 Z([[6],[[7],[3,'item']],[3,'w_date']])
-Z([3,'false'])
+Z(z[7])
 Z([3,'true'])
 Z([[2,'+'],[[2,'+'],[[6],[[7],[3,'item']],[3,'w_place']],[1,'-']],[[6],[[7],[3,'item']],[3,'w_content']]])
 Z([[2,'+'],[[2,'+'],[[2,'+'],[1,'4-'],[[7],[3,'index']]],[1,',']],[[2,'+'],[1,'3-'],[[7],[3,'index']]]])
 Z(z[2])
-Z(z[20])
+Z(z[21])
 Z([[7],[3,'icon']])
-Z(z[22])
 Z(z[23])
-Z(z[24])
+Z(z[7])
 Z(z[25])
+Z(z[26])
 Z([[2,'+'],[[2,'+'],[[2,'+'],[1,'5-'],[[7],[3,'index']]],[1,',']],[[2,'+'],[1,'3-'],[[7],[3,'index']]]])
 })(__WXML_GLOBAL__.ops_cached.$gwx_6);return __WXML_GLOBAL__.ops_cached.$gwx_6
 }
@@ -1261,22 +1262,22 @@ var cW=_v()
 _(oV,cW)
 if(_oz(z,1,e,s,gg)){cW.wxVkey=1
 var oX=_mz(z,'uni-list',['bind:__l',2,'vueId',1,'vueSlots',2],[],e,s,gg)
-var lY=_mz(z,'uni-list-item',['bind:__l',5,'note',1,'title',2,'vueId',3],[],e,s,gg)
+var lY=_mz(z,'uni-list-item',['bind:__l',5,'note',1,'showArrow',2,'title',3,'vueId',4],[],e,s,gg)
 _(oX,lY)
 _(cW,oX)
 }
 var aZ=_v()
 _(oV,aZ)
 var t1=function(b3,e2,o4,gg){
-var o6=_mz(z,'uni-list',['bind:__l',13,'class',1,'hoverClass',2,'vueId',3,'vueSlots',4],[],b3,e2,gg)
+var o6=_mz(z,'uni-list',['bind:__l',14,'class',1,'hoverClass',2,'vueId',3,'vueSlots',4],[],b3,e2,gg)
 var f7=_v()
 _(o6,f7)
-if(_oz(z,18,b3,e2,gg)){f7.wxVkey=1
-var c8=_mz(z,'uni-list-item',['bind:__l',19,'class',1,'extraIcon',2,'note',3,'showArrow',4,'showExtraIcon',5,'title',6,'vueId',7],[],b3,e2,gg)
+if(_oz(z,19,b3,e2,gg)){f7.wxVkey=1
+var c8=_mz(z,'uni-list-item',['bind:__l',20,'class',1,'extraIcon',2,'note',3,'showArrow',4,'showExtraIcon',5,'title',6,'vueId',7],[],b3,e2,gg)
 _(f7,c8)
 }
 else{f7.wxVkey=2
-var h9=_mz(z,'uni-list-item',['bind:__l',27,'class',1,'extraIcon',2,'note',3,'showArrow',4,'showExtraIcon',5,'title',6,'vueId',7],[],b3,e2,gg)
+var h9=_mz(z,'uni-list-item',['bind:__l',28,'class',1,'extraIcon',2,'note',3,'showArrow',4,'showExtraIcon',5,'title',6,'vueId',7],[],b3,e2,gg)
 _(f7,h9)
 }
 f7.wxXCkey=1
@@ -1286,7 +1287,7 @@ _(o4,o6)
 return o4
 }
 aZ.wxXCkey=4
-_2z(z,11,t1,e,s,gg,aZ,'item','index','index')
+_2z(z,12,t1,e,s,gg,aZ,'item','index','index')
 cW.wxXCkey=1
 cW.wxXCkey=3
 _(r,oV)
@@ -1999,7 +2000,7 @@ require('pages/index/index.js');
 __wxRoute = 'pages/result/result';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/result/result.js';
 
 define('pages/result/result.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/result/result"],{"0572":function(n,t,i){"use strict";var e=function(){var n=this,t=n.$createElement;n._self._c},u=[];i.d(t,"a",function(){return e}),i.d(t,"b",function(){return u})},"080a":function(n,t,i){"use strict";i.r(t);var e=i("0572"),u=i("cbb6");for(var o in u)"default"!==o&&function(n){i.d(t,n,function(){return u[n]})}(o);var c=i("2877"),l=Object(c["a"])(u["default"],e["a"],e["b"],!1,null,null,null);t["default"]=l.exports},1918:function(n,t,i){"use strict";(function(n){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var e=function(){return i.e("components/uni-list/uni-list").then(i.bind(null,"1717"))},u=function(){return i.e("components/uni-list-item/uni-list-item").then(i.bind(null,"91a7"))},o=function(){return i.e("components/uni-icon/uni-icon").then(i.bind(null,"aca4"))},c={components:{uniList:e,uniListItem:u,uniIcon:o},data:function(){return{list:[],id:"",icon:{color:"#ddd",size:"22",type:"location-filled"},iconin:{color:"red",size:"22",type:"location-filled"}}},onLoad:function(t){var i=this,e=t.id;this.id=e,n.request({url:"http://www.hu1tong.com/index.php/index/query?id="+e,method:"GET",data:{},success:function(n){i.list=n.data.data},fail:function(){},complete:function(){}})},methods:{}};t.default=c}).call(this,i("6e42")["default"])},cbb6:function(n,t,i){"use strict";i.r(t);var e=i("1918"),u=i.n(e);for(var o in e)"default"!==o&&function(n){i.d(t,n,function(){return e[n]})}(o);t["default"]=u.a}},[["3922","common/runtime","common/vendor"]]]);
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/result/result"],{"080a":function(n,t,i){"use strict";i.r(t);var e=i("c3c9"),u=i("cbb6");for(var o in u)"default"!==o&&function(n){i.d(t,n,function(){return u[n]})}(o);var c=i("2877"),l=Object(c["a"])(u["default"],e["a"],e["b"],!1,null,null,null);t["default"]=l.exports},1918:function(n,t,i){"use strict";(function(n){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var e=function(){return i.e("components/uni-list/uni-list").then(i.bind(null,"1717"))},u=function(){return i.e("components/uni-list-item/uni-list-item").then(i.bind(null,"91a7"))},o=function(){return i.e("components/uni-icon/uni-icon").then(i.bind(null,"aca4"))},c={components:{uniList:e,uniListItem:u,uniIcon:o},data:function(){return{list:[],id:"",icon:{color:"#ddd",size:"22",type:"location-filled"},iconin:{color:"red",size:"22",type:"location-filled"}}},onLoad:function(t){var i=this,e=t.id;this.id=e,n.request({url:"http://www.hu1tong.com/index.php/index/query?id="+e,method:"GET",data:{},success:function(n){i.list=n.data.data},fail:function(){},complete:function(){}})},methods:{}};t.default=c}).call(this,i("6e42")["default"])},c3c9:function(n,t,i){"use strict";var e=function(){var n=this,t=n.$createElement;n._self._c},u=[];i.d(t,"a",function(){return e}),i.d(t,"b",function(){return u})},cbb6:function(n,t,i){"use strict";i.r(t);var e=i("1918"),u=i.n(e);for(var o in e)"default"!==o&&function(n){i.d(t,n,function(){return e[n]})}(o);t["default"]=u.a}},[["3922","common/runtime","common/vendor"]]]);
 });
 require('pages/result/result.js');
 ;(function(global) {

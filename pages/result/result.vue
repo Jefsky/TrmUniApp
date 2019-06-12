@@ -4,7 +4,7 @@
 			<text class="uni-h3 uni-page-head-title">运单{{id}}物流状态</text>
 		</view>
 		<uni-list v-if="list.length == 0">
-			<uni-list-item title="暂无物流信息" note="---"></uni-list-item>
+			<uni-list-item title="暂无物流信息" note="---"  show-arrow="false"></uni-list-item>
 		</uni-list>
 		<view class="uni-list">
 			<uni-list class="uni-list-cell" hover-class="uni-list-cell-hover" v-for="(item,index) in list" :key="index">
