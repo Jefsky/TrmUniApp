@@ -5,7 +5,7 @@
 			<text class="title">{{title}}</text>
 		</view>
 		<view class="uni-form-item uni-column">
-			<input class="uni-input" focus :placeholder="uni_input" @input="onKeyIdInput"/>
+			<input class="uni-input" type="text" focus :placeholder="uni_input" @input="onKeyIdInput"/>
 		</view>
 		<view class="uni-btn-v">
 			<button type="primary" @click="search">查询</button>

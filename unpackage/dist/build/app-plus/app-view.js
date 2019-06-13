@@ -11,13 +11,12 @@ var __WXML_GLOBAL__ = {
 };
 var $gwx;
 
-/*v0.5vv_20190312_syb_scopedata*/window.__wcc_version__='v0.5vv_20190312_syb_scopedata';window.__wcc_version_info__={"customComponents":true,"fixZeroRpx":true,"propValueDeepCopy":false};
+/*v0.5vv_20180905_syb_scopedata*/window.__wcc_version__='v0.5vv_20180905_syb_scopedata';window.__wcc_version_info__={"customComponents":true,"fixZeroRpx":true,"propValueDeepCopy":false};
 var $gwxc
 var $gaic={}
 $gwx=function(path,global){
 if(typeof global === 'undefined') global={};if(typeof __WXML_GLOBAL__ === 'undefined') {__WXML_GLOBAL__={};
-}__WXML_GLOBAL__.modules = __WXML_GLOBAL__.modules || {};
-function _(a,b){if(typeof(b)!='undefined')a.children.push(b);}
+}function _(a,b){if(typeof(b)!='undefined')a.children.push(b);}
 function _v(k){if(typeof(k)!='undefined')return {tag:'virtual','wxKey':k,children:[]};return {tag:'virtual',children:[]};}
 function _n(tag){$gwxc++;if($gwxc>=16000){throw 'Dom limit exceeded, please check if there\'s any mistake you\'ve made.'};return {tag:'wx-'+tag,attr:{},children:[],n:[],raw:{},generics:{}}}
 function _p(a,b){b&&a.properities.push(b);}
@@ -422,11 +421,8 @@ e.stack = e.stack.substring(0,e.stack.indexOf("\n", e.stack.lastIndexOf("at nv_"
 e.stack = e.stack.replace(/\snv_/g," "); 
 e.stack = $gstack(e.stack);	
 if(g.debugInfo)
-{
 e.stack += "\n "+" "+" "+" at "+g.debugInfo[0]+":"+g.debugInfo[1]+":"+g.debugInfo[2];
-console.error(e);
-}
-_r = undefined;
+throw e;
 }
 return should_pass_type_info && (_tb || _ta) ? wh.nh( _r, 'f' ) : _r;
 }
@@ -651,32 +647,34 @@ return false;
 function _da( node, attrname, opindex, raw, o )
 {
 var isaffected = false;
-var value = $gdc( raw, "", 2 );
-if ( o.ap && value && value.constructor===Function ) 
-{
-attrname = "$wxs:" + attrname; 
-node.attr["$gdc"] = $gdc;
-}
 if ( o.is_affected || _ca(raw) ) 
 {
 node.n.push( attrname );
 node.raw[attrname] = raw;
+var value = $gdc( raw, "", 2 );
+return value;
 }
-node.attr[attrname] = value;
+else
+{
+var value = $gdc( raw, "", 2 );
+return value;
+}
 }
 function _r( node, attrname, opindex, env, scope, global ) 
 {
 global.opindex=opindex;
 var o = {}, _env;
 var a = grb( z[opindex], env, scope, global, o );
-_da( node, attrname, opindex, a, o );
+a = _da( node, attrname, opindex, a, o );
+node.attr[attrname] = a;
 }
 function _rz( z, node, attrname, opindex, env, scope, global ) 
 {
 global.opindex=opindex;
 var o = {}, _env;
 var a = grb( z[opindex], env, scope, global, o );
-_da( node, attrname, opindex, a, o );
+a = _da( node, attrname, opindex, a, o );
+node.attr[attrname] = a;
 }
 function _o( opindex, env, scope, global )
 {
@@ -1051,7 +1049,7 @@ if(typeof(global.entrys)==='undefined')global.entrys={};e_=global.entrys;
 var d_={}
 if(typeof(global.defines)==='undefined')global.defines={};d_=global.defines;
 var f_={}
-if(typeof(global.modules)==='undefined')global.modules={};f_=global.modules || {};
+if(typeof(global.modules)==='undefined')global.modules={};f_=global.modules;
 var p_={}
 __WXML_GLOBAL__.ops_cached = __WXML_GLOBAL__.ops_cached || {}
 __WXML_GLOBAL__.ops_set = __WXML_GLOBAL__.ops_set || {};
@@ -1145,6 +1143,7 @@ Z([3,'__e'])
 Z([3,'uni-input'])
 Z([[4],[[5],[[4],[[5],[[5],[1,'input']],[[4],[[5],[[4],[[5],[[5],[1,'onKeyIdInput']],[[4],[[5],[1,'$event']]]]]]]]]]])
 Z([[7],[3,'uni_input']])
+Z([3,'text'])
 Z([3,'uni-btn-v'])
 Z(z[6])
 Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'search']],[[4],[[5],[1,'$event']]]]]]]]]]])
@@ -1152,7 +1151,7 @@ Z([3,'primary'])
 Z([3,'查询'])
 Z(z[6])
 Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'qrcode']],[[4],[[5],[1,'$event']]]]]]]]]]])
-Z(z[13])
+Z(z[14])
 Z([3,'扫码'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_5);return __WXML_GLOBAL__.ops_cached.$gwx_5
 }
@@ -1165,47 +1164,38 @@ Z([3,'text-box'])
 Z([3,'true'])
 Z([3,'uni-h3 uni-page-head-title'])
 Z([a,[[2,'+'],[[2,'+'],[1,'运单'],[[7],[3,'id']]],[1,'物流状态']]])
-Z([[2,'=='],[[6],[[7],[3,'list']],[3,'length']],[1,0]])
-Z([3,'__l'])
-Z([3,'1'])
-Z([[4],[[5],[1,'default']]])
-Z(z[6])
-Z([3,'---'])
-Z([3,'false'])
-Z([3,'暂无物流信息'])
-Z([[2,'+'],[[2,'+'],[1,'2'],[1,',']],[1,'1']])
 Z([3,'uni-list'])
 Z([3,'index'])
 Z([3,'item'])
 Z([[7],[3,'list']])
-Z(z[15])
 Z(z[6])
+Z([3,'__l'])
 Z([3,'uni-list-cell'])
 Z([3,'uni-list-cell-hover'])
-Z([[2,'+'],[1,'3-'],[[7],[3,'index']]])
-Z(z[8])
+Z([[2,'+'],[1,'1-'],[[7],[3,'index']]])
+Z([[4],[[5],[1,'default']]])
 Z([[2,'=='],[[7],[3,'index']],[1,0]])
-Z(z[6])
+Z(z[10])
 Z([3,'uni-h4'])
 Z([[7],[3,'iconin']])
 Z([[6],[[7],[3,'item']],[3,'w_date']])
-Z(z[11])
+Z([3,'false'])
 Z(z[2])
 Z([[2,'+'],[[2,'+'],[[6],[[7],[3,'item']],[3,'w_place']],[1,'-']],[[6],[[7],[3,'item']],[3,'w_content']]])
-Z([[2,'+'],[[2,'+'],[[2,'+'],[1,'4-'],[[7],[3,'index']]],[1,',']],[[2,'+'],[1,'3-'],[[7],[3,'index']]]])
-Z(z[6])
-Z(z[26])
+Z([[2,'+'],[[2,'+'],[[2,'+'],[1,'2-'],[[7],[3,'index']]],[1,',']],[[2,'+'],[1,'1-'],[[7],[3,'index']]]])
+Z(z[10])
+Z(z[17])
 Z([[7],[3,'icon']])
-Z(z[28])
-Z(z[11])
+Z(z[19])
+Z(z[20])
 Z(z[2])
-Z(z[31])
-Z([[2,'+'],[[2,'+'],[[2,'+'],[1,'5-'],[[7],[3,'index']]],[1,',']],[[2,'+'],[1,'3-'],[[7],[3,'index']]]])
+Z(z[22])
+Z([[2,'+'],[[2,'+'],[[2,'+'],[1,'3-'],[[7],[3,'index']]],[1,',']],[[2,'+'],[1,'1-'],[[7],[3,'index']]]])
 })(__WXML_GLOBAL__.ops_cached.$gwx_6);return __WXML_GLOBAL__.ops_cached.$gwx_6
 }
 __WXML_GLOBAL__.ops_set.$gwx=z;
 __WXML_GLOBAL__.ops_init.$gwx=true;
-var nv_require=function(){var nnm={};var nom={};return function(n){return function(){if(!nnm[n]) return undefined;try{if(!nom[n])nom[n]=nnm[n]();return nom[n];}catch(e){e.message=e.message.replace(/nv_/g,'');var tmp = e.stack.substring(0,e.stack.lastIndexOf(n));e.stack = tmp.substring(0,tmp.lastIndexOf('\n'));e.stack = e.stack.replace(/\snv_/g,' ');e.stack = $gstack(e.stack);e.stack += '\n    at ' + n.substring(2);console.error(e);}
+var nv_require=function(){var nnm={};var nom={};return function(n){return function(){if(!nnm[n]) return undefined;try{if(!nom[n])nom[n]=nnm[n]();return nom[n];}catch(e){e.message=e.message.replace(/nv_/g,'');var tmp = e.stack.substring(0,e.stack.lastIndexOf(n));e.stack = tmp.substring(0,tmp.lastIndexOf('\n'));e.stack = e.stack.replace(/\snv_/g,' ');e.stack = $gstack(e.stack);e.stack += '\n    at ' + n.substring(2);throw e;}
 }}}()
 var x=['./components/uni-badge/uni-badge.wxml','./components/uni-icon/uni-icon.wxml','./components/uni-list-item/uni-list-item.wxml','./components/uni-list/uni-list.wxml','./pages/index/index.wxml','./pages/result/result.wxml'];d_[x[0]]={}
 var m0=function(e,s,r,gg){
@@ -1342,17 +1332,17 @@ _(o0,cAB)
 _(c8,o0)
 var lCB=_n('view')
 _rz(z,lCB,'class',5,e,s,gg)
-var aDB=_mz(z,'input',['focus',-1,'bindinput',6,'class',1,'data-event-opts',2,'placeholder',3],[],e,s,gg)
+var aDB=_mz(z,'input',['focus',-1,'bindinput',6,'class',1,'data-event-opts',2,'placeholder',3,'type',4],[],e,s,gg)
 _(lCB,aDB)
 _(c8,lCB)
 var tEB=_n('view')
-_rz(z,tEB,'class',10,e,s,gg)
-var eFB=_mz(z,'button',['bindtap',11,'data-event-opts',1,'type',2],[],e,s,gg)
-var bGB=_oz(z,14,e,s,gg)
+_rz(z,tEB,'class',11,e,s,gg)
+var eFB=_mz(z,'button',['bindtap',12,'data-event-opts',1,'type',2],[],e,s,gg)
+var bGB=_oz(z,15,e,s,gg)
 _(eFB,bGB)
 _(tEB,eFB)
-var oHB=_mz(z,'button',['bindtap',15,'data-event-opts',1,'type',2],[],e,s,gg)
-var xIB=_oz(z,18,e,s,gg)
+var oHB=_mz(z,'button',['bindtap',16,'data-event-opts',1,'type',2],[],e,s,gg)
+var xIB=_oz(z,19,e,s,gg)
 _(oHB,xIB)
 _(tEB,oHB)
 _(c8,tEB)
@@ -1365,48 +1355,38 @@ var m5=function(e,s,r,gg){
 var z=gz$gwx_6()
 var fKB=_n('view')
 _rz(z,fKB,'class',0,e,s,gg)
-var hMB=_mz(z,'view',['class',1,'scrollY',1],[],e,s,gg)
-var oNB=_n('text')
-_rz(z,oNB,'class',3,e,s,gg)
-var cOB=_oz(z,4,e,s,gg)
-_(oNB,cOB)
+var cLB=_mz(z,'view',['class',1,'scrollY',1],[],e,s,gg)
+var hMB=_n('text')
+_rz(z,hMB,'class',3,e,s,gg)
+var oNB=_oz(z,4,e,s,gg)
 _(hMB,oNB)
-_(fKB,hMB)
-var cLB=_v()
+_(cLB,hMB)
 _(fKB,cLB)
-if(_oz(z,5,e,s,gg)){cLB.wxVkey=1
-var oPB=_mz(z,'uni-list',['bind:__l',6,'vueId',1,'vueSlots',2],[],e,s,gg)
-var lQB=_mz(z,'uni-list-item',['bind:__l',9,'note',1,'showArrow',2,'title',3,'vueId',4],[],e,s,gg)
-_(oPB,lQB)
-_(cLB,oPB)
+var cOB=_n('view')
+_rz(z,cOB,'class',5,e,s,gg)
+var oPB=_v()
+_(cOB,oPB)
+var lQB=function(tSB,aRB,eTB,gg){
+var oVB=_mz(z,'uni-list',['bind:__l',10,'class',1,'hoverClass',2,'vueId',3,'vueSlots',4],[],tSB,aRB,gg)
+var xWB=_v()
+_(oVB,xWB)
+if(_oz(z,15,tSB,aRB,gg)){xWB.wxVkey=1
+var oXB=_mz(z,'uni-list-item',['bind:__l',16,'class',1,'extraIcon',2,'note',3,'showArrow',4,'showExtraIcon',5,'title',6,'vueId',7],[],tSB,aRB,gg)
+_(xWB,oXB)
 }
-var aRB=_n('view')
-_rz(z,aRB,'class',14,e,s,gg)
-var tSB=_v()
-_(aRB,tSB)
-var eTB=function(oVB,bUB,xWB,gg){
-var fYB=_mz(z,'uni-list',['bind:__l',19,'class',1,'hoverClass',2,'vueId',3,'vueSlots',4],[],oVB,bUB,gg)
-var cZB=_v()
-_(fYB,cZB)
-if(_oz(z,24,oVB,bUB,gg)){cZB.wxVkey=1
-var h1B=_mz(z,'uni-list-item',['bind:__l',25,'class',1,'extraIcon',2,'note',3,'showArrow',4,'showExtraIcon',5,'title',6,'vueId',7],[],oVB,bUB,gg)
-_(cZB,h1B)
-}
-else{cZB.wxVkey=2
-var o2B=_mz(z,'uni-list-item',['bind:__l',33,'class',1,'extraIcon',2,'note',3,'showArrow',4,'showExtraIcon',5,'title',6,'vueId',7],[],oVB,bUB,gg)
-_(cZB,o2B)
-}
-cZB.wxXCkey=1
-cZB.wxXCkey=3
-cZB.wxXCkey=3
+else{xWB.wxVkey=2
+var fYB=_mz(z,'uni-list-item',['bind:__l',24,'class',1,'extraIcon',2,'note',3,'showArrow',4,'showExtraIcon',5,'title',6,'vueId',7],[],tSB,aRB,gg)
 _(xWB,fYB)
-return xWB
 }
-tSB.wxXCkey=4
-_2z(z,17,eTB,e,s,gg,tSB,'item','index','index')
-_(fKB,aRB)
-cLB.wxXCkey=1
-cLB.wxXCkey=3
+xWB.wxXCkey=1
+xWB.wxXCkey=3
+xWB.wxXCkey=3
+_(eTB,oVB)
+return eTB
+}
+oPB.wxXCkey=4
+_2z(z,8,lQB,e,s,gg,oPB,'item','index','index')
+_(fKB,cOB)
 _(r,fKB)
 return r
 }
@@ -1437,7 +1417,7 @@ var BASE_DEVICE_WIDTH = 750;
 var isIOS=navigator.userAgent.match("iPhone");
 var deviceWidth = window.screen.width || 375;
 var deviceDPR = window.devicePixelRatio || 2;
-var checkDeviceWidth = window.__checkDeviceWidth__ || function() {
+function checkDeviceWidth() {
 var newDeviceWidth = window.screen.width || 375
 var newDeviceDPR = window.devicePixelRatio || 2
 var newDeviceHeight = window.screen.height || 375
@@ -1449,7 +1429,7 @@ deviceDPR = newDeviceDPR
 }
 checkDeviceWidth()
 var eps = 1e-4;
-var transformRPX = window.__transformRpx__ || function(number, newDeviceWidth) {
+function transformRPX(number, newDeviceWidth) {
 if ( number === 0 ) return 0;
 number = number / BASE_DEVICE_WIDTH * ( newDeviceWidth || deviceWidth );
 number = Math.floor(number + eps);
