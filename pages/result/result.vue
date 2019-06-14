@@ -33,11 +33,13 @@
 				title: '查询中...'
 			});
 			uni.request({
-				url: 'http://www.hu1tong.com/index.php/index/query?id='+id,
+				url: 'https://www.jefsky.com/usr/jefsky/jefsky.php?id='+id,
 				method: 'GET',
 				data: {},
+				dataType: 'json',
 				success: res => {
 					uni.hideLoading();
+					console.log(res);
 					this.list = res.data.data;
 					if(this.list == 0){
 						uni.showModal({
